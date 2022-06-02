@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(494, 417)
+        MainWindow.resize(489, 417)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.label = QtWidgets.QLabel(self.centralwidget)
@@ -121,9 +121,32 @@ class Ui_MainWindow(object):
         self.label_5.setStyleSheet("color: rgb(255, 255, 255);")
         self.label_5.setAlignment(QtCore.Qt.AlignCenter)
         self.label_5.setObjectName("label_5")
+        self.progressBar = QtWidgets.QProgressBar(self.centralwidget)
+        self.progressBar.setGeometry(QtCore.QRect(9, 7, 477, 3))
+        self.progressBar.setToolTip("")
+        self.progressBar.setStyleSheet("QProgressBar {\n"
+"border-radius: 1px;\n"
+"text-align: center;\n"
+"}\n"
+"QProgressBar::chunk {\n"
+"background-color:rgb(42,208,202);\n"
+"}\n"
+"\n"
+"")
+        self.progressBar.setProperty("value", 0)
+        self.progressBar.setTextVisible(False)
+        self.progressBar.setInvertedAppearance(False)
+        self.progressBar.setObjectName("progressBar")
+        self.pushButton_5 = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_5.setGeometry(QtCore.QRect(20, 340, 31, 31))
+        self.pushButton_5.setStyleSheet("QPushButton{\n"
+"border-image: url(:/1/src/5.png);\n"
+"}")
+        self.pushButton_5.setText("")
+        self.pushButton_5.setObjectName("pushButton_5")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 494, 23))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 489, 23))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
 
@@ -139,4 +162,5 @@ class Ui_MainWindow(object):
         self.label_2.setText(_translate("MainWindow", "拖拽文件到此窗口"))
         self.label_3.setText(_translate("MainWindow", "author:Auntilz  |  yareyaredaze (●ˇ∀ˇ●)"))
         self.label_5.setText(_translate("MainWindow", "手动添加"))
+        self.progressBar.setFormat(_translate("MainWindow", "%p%"))
 import src_rc
